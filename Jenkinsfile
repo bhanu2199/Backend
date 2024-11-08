@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the latest code from the GitHub repository
-                git 'https://github.com/bhanu2199/Case-Study.git'
+                git branch: 'feature', url: 'https://github.com/bhanu2199/Case-Study.git'
             }
         }
 

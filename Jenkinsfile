@@ -11,9 +11,14 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                // Install all dependencies defined in package.json
+                // Load nvm and set the correct PATH
                 script {
-                    sh 'export PATH=$PATH:/root/.nvm/versions/node/v16.20.2/bin && npm install'
+                    sh '''#!/bin/bash
+                    source ~/.nvm/nvm.sh
+                    nvm install 16  # Or any specific Node.js version you want to use
+                    nvm use 16
+                    npm install
+                    '''
                 }
             }
         }

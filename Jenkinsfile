@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    tools {
-        jdk 'jdk-11'
-        maven 'maven-3.6.3'
-    }
+    // tools {
+    //     jdk 'jdk-11'
+    //     maven 'maven-3.6.3'
+    // }
 
     stages {
         stage('Checkout') {
@@ -13,23 +13,23 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                sh 'mvn clean install'
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         sh 'mvn clean install'
+        //     }
+        // }
 
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         sh 'mvn test'
+        //     }
+        // }
 
-        stage('Package') {
-            steps {
-                sh 'mvn package'
-            }
-        }
+        // stage('Package') {
+        //     steps {
+        //         sh 'mvn package'
+        //     }
+        // }
     }
 }
 

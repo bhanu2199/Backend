@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Install all dependencies defined in package.json
                 script {
-                    sh 'npm install'
+                    sh 'export PATH=$PATH:/root/.nvm/versions/node/v16.20.2/bin && npm install'
                 }
             }
         }
